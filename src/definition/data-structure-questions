@@ -1,27 +1,69 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+Ans:- We need because it solves a lot of problems like when using arraymlist linked list and in searching like we use sorting to solve big problems
 List out the areas in which data structures are applied extensively?
+Ans:- in Sorting and insertion of big data
 what is an Array?
+Ans:-An array is a container that holds a fixed number of values.
 what is the difference between the Array and ArrayList?
+Ans:- Arrays  store fixed number of elements they are fixed sized, while ArrayList is dynamic.
+An array is basic functionality provided by Java. ArrayList is part of collection framework in Java
 what is LinkedList?
+Ans:-A linked list is a linear data structure where each element is a separate object
 what is queue?
+Ans:-It represents an ordered list of objects just like a List.
+A queue is designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue
 what is stack?
+Ans:- a special type of data structure in which items are removed in the reverse order from that in which they are added,
+so the most recently added item is the first one removed.
+This is also called last-in, first-out (LIFO). Adding an item to a stack is called pushing.
 what is FIFO and LIFO?
+Ans:-FIFO means first in first out, that is the oldest request is handled first,and LIFO last in first out is the opposite of FIFO
 what is the order of complexity?
+Ans:-So if you've got an algorithm that sorts an array of size n and
+it requires only a constant amount of extra space and it takes (for example) 2 n² + n steps to complete,
+then you would say it's space complexity is O(n) or O(1) (depending on wether you count the size of the input array or not) and it's time complexity is O(n²).
+Knowing only those O numbers, you could roughly determine how much more space and  time is needed to go from n to n + 100 or 2 n or whatever you are interested in.
+That is how well an algorithm "scales".(I need more explanation on that)???????
 what is the best case to search an element from an array?
+Ans:-???????????????????????????
 what is the worst case to search an element from an array?
+Ans:-?????????????????????????????????
 what is tree in data structure?
+Ans:-Tree represents nodes connected by edges.
 what is graph in data structure?
+Ans:-A graph is a pictorial representation of a set of objects where some pairs of objects are connected by links.
 what is the difference between the HashTable and HashMap?
+Ans:-1)Hashtable is synchronized whereas hashmap is not.
+2)Another difference is that iterator in the HashMap is fail-safe while the enumerator for the Hashtable isn't. If you change the map while iterating, you'll know.
+3)HashMap permits null values in it, while Hashtable doesn't
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+Ans:-RDBMS = Array (i.e. Array of structures)
+     Network data model = Graph
+     Hierarchical data model = Trees
 How HashMap works in java?
+Ans:-When put() method is used to store (Key, Value) pair,
+HashMap implementation calls hashcode on Key object to calculate a hash that is used to find a bucket where Entry object will be stored
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+Ans:-: An exception  is a problem that arises during the execution of a program
+it means, that you want to get element of array that not exist in an index
 What are the different ways of copying an array into another array?
+Ans:- One is assigning the array to another array like if u want to copy the value of lets say a[i] to b[i] we say b[i]=a[i]
+another ways are using java keywords like System.arraycopy()
 What is difference between an array and a linked list?
+Ans:-(1)	The size of the arrays is fixed, linked list its Dynamic size
+(2)Inserting a new element in an array of elements is expensive/ you have to create another room for new ones but in liked lists easey of insert/delete
 What is DFS and BFS?
+Ans:-BFS (Breadth First Search)This can be throught of as being like Dijkstra's algorithm for shortest paths, but with every edge having the same length.
+However it is a lot simpler and doesn't need any data structures.We just keep a tree (the breadth first search tree), a list of nodes to be added to the tree,
+and markings (Boolean variables) on the vertices to tell whether they are in the tree or list.
+DFS (Depth first search)--Depth first search is another way of traversing graphs, which is closely related to preorder traversal of a tree. Recall that preorder traversal simply visits each node before its children.
+It is most easy to program as a recursive routine:
 What is Recursion?
+Ans:- Recursion is a tool a programmer can use to invoke a function call on itself.
 What is Big-(O)-notation?
+Ans:-Big O notation is used in Computer Science to describe the performance or complexity of an algorithm.
 Outlined different kind of sorting algorithm with time complexity?
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.

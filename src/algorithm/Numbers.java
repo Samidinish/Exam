@@ -12,12 +12,12 @@ public class Numbers {
 	public static void main(String[] args) {
 		
 		int [] num = new int[10000];
-		
+
 		Random rand = new Random();
+
 		for(int i=0; i<num.length; i++){
 			
 		num[i] = rand.nextInt(1000000);
-			
 		}
 
 		//Selection Sort

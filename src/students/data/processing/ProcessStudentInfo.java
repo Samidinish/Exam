@@ -76,7 +76,7 @@ public class ProcessStudentInfo {
                     XMLInputFactory factory = XMLInputFactory.newInstance();
                     XMLEventReader eventReader =
                             factory.createXMLEventReader(
-                                    new FileReader("input.txt"));
+                                    new FileReader("C:\\Users\\asus\\Desktop\\DinishGit\\Exam\\src\\xml\\parser\\selenium.xml"));
 
                     while(eventReader.hasNext()){
                         XMLEvent event = eventReader.nextEvent();
