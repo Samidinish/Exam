@@ -1,0 +1,57 @@
+Please answer the below core-java Questions:
+
+
+What jdk contains or composed of and define each components?
+Ans:- jdk- a software development tool which is composed of
+Java Runtime Environment (JRE), an interpreter/loader (java),
+a compiler (javac), an archiver (jar), a documentation generator (javadoc) and other tools
+What is IDE?
+Ans:-An integrated development environment (IDE)is a source code editor for software programers, and it also includes debugger.
+What are the IDEs available in the market to support java?
+Ans:- Eclipse, Intellij, NetBeans, sublime, ....
+Explain the entire java life cycle.
+Ans:- We can use any text editor to create the high-level Java text file. This file is saved as a .java file on the disk.
+We then compile this text file using the Java compiler, which result in a .class file being created on the disk.
+The .class file contains the bytecodes. The file is then loaded into memory by the class loader.
+The bytecode verifier confirms that the bytecodes are valid and not hostile.
+Finally, the JVM reads the bytecodes in memory and translates them into machine code.
+what is class?
+Ans:- Class is a group of Objects that has common properties.
+What is object?
+Ans:- An Object is an instance of a class
+What is the entry point of an application?
+Ans:- main() Method is an entry point of an application
+Why main is static?
+Ans:- because it is called by the JVM before any objects are made
+What is the difference between an Interface and Abstract class?
+Ans:-abstract class can extend only one class or one abstract class at a time,but interface can extend any number of interfaces at a time
+abstract  class  can extend from a class or from an abstract class, but interface can extend only from an interface
+A class can extend only one abstract class, but in interface a class can implement any number of interfaces
+......
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+Ans:-?????????????????????????????????????????????
+what is Access Specifier?
+Ans:- this are keywords in OO language that set the accecibility of a classes, methods and other members
+What is OOP ? Define each feature of java OOP.
+Ans:-
+What is API? Name list of API that you have used so far.
+Does java support multiple inheritance?
+What is method overloading and when it happens?
+What is method overriding and when it happens?
+Explain exceptions in java and how to handle it.
+What is static keyword in java? How it has been used in variables and methods ?
+What is final and how it has been used variables and methods?
+What is final, finally and finalize?
+What is a constructor ?
+What is "this" keyword in java ?
+What is "super" keyword in java?
+What is JVM stand for ?
+Ans:- Java Virtual Machine
+What version of java are you using?
+Ans:-Jdk
+What is JAR stand for ?
+ANs:- Java Archive
+What is compile time and run time?
+What is heap?
+How java manage it's memory?
+What is the difference between String, StringBuffer and StringBuilder?
