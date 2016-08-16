@@ -47,7 +47,7 @@ public class XmlReader {
 						student.lastName = content;
 						break;
 					case "score":
-						student.score = convertIntToChar(content);  
+						student.score = convertIntToChar(content);
 						break;	
 					}
 				}
@@ -64,19 +64,27 @@ public class XmlReader {
 		String grade = "";
 
 
-		int marks = 72; // you can this value and run the program
+		// you can this value and run the program
 		//char grade = 'N'; // No grade assigned yet
 		// Assign the grade depending on marks
-		if ( marks >= 90 && marks<=100  ) {
+		if ( Integer.parseInt(score) >= 90   ) {
 			grade = "A";
 		}
-		else if ( marks >=80 && marks < 90 ) {
+		else if ( Integer.parseInt(score) >=80 && Integer.parseInt(score) < 90 ) {
 			grade = "B";
 		}
-		else if ( marks >=70 && marks < 80 ) {
+		else if ( Integer.parseInt(score) >=70 && Integer.parseInt(score) < 80 ) {
 			grade = "C";
 		}
-				return grade;
+		else if ( Integer.parseInt(score) >=50 && Integer.parseInt(score) < 70 ) {
+			grade = "C";
+		}
+		else{
+			grade="F";
+		}
+		return grade;
 	}
-	
+
+
+
 }

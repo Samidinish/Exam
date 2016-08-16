@@ -1,6 +1,6 @@
 package oop.design;
 
-public class EmployeeInfo{
+public class EmployeeInfo extends AbstractEmployee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -29,7 +29,8 @@ public class EmployeeInfo{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		super();
+
 	}
     public EmployeeInfo(String name, int employeeId){
 		
@@ -57,6 +58,39 @@ public class EmployeeInfo{
 	 */
 	public static int calculateEmployePension(){
 		int total=0;
+
 		return total;
 	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////
+	private double salary; //Annual salary
+	public EmployeeInfo(String name, String address, int number, double
+			salary)
+	{
+		super(name, address, number);
+		setSalary(salary);
+	}
+	public void mailCheck()
+	{
+		System.out.println("Within mailCheck of Salary class ");
+		System.out.println("Mailing check to " + getName()
+				+ " with salary " + salary);
+	}
+	public double getSalary()
+	{
+		return salary;
+	}
+	public void setSalary(double newSalary)
+	{
+		if(newSalary >= 0.0)
+		{
+			salary = newSalary;
+		}
+	}
+	public double computePay()
+	{
+		System.out.println("Computing salary pay for " + getName());
+		return salary/52;
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////
 }

@@ -9,7 +9,7 @@ public class PrimeNumber {
 		 * Out put number of Prime numbers on the given range.
 		 * 
 		 */
-//define limit
+		//define limit
 		int limit = 1000000;
 
 		System.out.println("Prime numbers from 2 to one million and " + limit);

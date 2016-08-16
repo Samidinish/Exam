@@ -4,6 +4,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import xml.parser.Student;
+import xml.parser.XmlReader;
 
 import javax.xml.bind.Element;
 import javax.xml.parsers.DocumentBuilder;
@@ -18,7 +20,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class ProcessStudentInfo {
 
@@ -43,10 +47,9 @@ public class ProcessStudentInfo {
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
-				String pathSelenium  = System.getProperty("user.dir") +"/src/xml/reader/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/xml/reader/qtp.xml";
-				String tag = "id";
-				
+				String pathSelenium  = System.getProperty("user.dir") +"/src/xml/parser/selenium.xml";
+				String pathQtp = System.getProperty("user.dir") + "/src/xml/parser/qtp.xml";
+
 				//Declare a Map with List<String> into it.
 				
 				
@@ -54,7 +57,7 @@ public class ProcessStudentInfo {
 				  Qtp student into another ArrayList. */
 				
 				
-				
+				//C:\Users\asus\Desktop\DinishGit\Exam\src\xml\parser\qtp.xml
 				//Create XMLReader object.
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
@@ -67,78 +70,23 @@ public class ProcessStudentInfo {
 		
 		      	
 				//Retrieve map data and display output.
+                String tag = "id";
+                XmlReader reader=new XmlReader();
+                List<Student> seleniumStudent=reader.parseData("id",pathSelenium);
+                List<Student> qtpStudent=reader.parseData("id",pathQtp);
+                System.out.println("Selenium Students");
+                for(Student st:seleniumStudent){
 
-                boolean bFirstName = false;
-                boolean bLastName = false;
-                boolean bNickName = false;
-                boolean bMarks = false;
-                try {
-                    XMLInputFactory factory = XMLInputFactory.newInstance();
-                    XMLEventReader eventReader =
-                            factory.createXMLEventReader(
-                                    new FileReader("C:\\Users\\asus\\Desktop\\DinishGit\\Exam\\src\\xml\\parser\\selenium.xml"));
+                    System.out.println(st);
+                }
+                System.out.println("#########################################################");
+                System.out.println("QTP Students");
+                for(Student qtp:qtpStudent){
 
-                    while(eventReader.hasNext()){
-                        XMLEvent event = eventReader.nextEvent();
-                        switch(event.getEventType()){
-                            case XMLStreamConstants.START_ELEMENT:
-                                StartElement startElement = event.asStartElement();
-                                String qName = startElement.getName().getLocalPart();
-                                if (qName.equalsIgnoreCase("student")) {
-                                    System.out.println("Start Element : student");
-                                    Iterator<Attribute> attributes = startElement.getAttributes();
-                                    String rollNo = attributes.next().getValue();
-                                    System.out.println("Roll No : " + rollNo);
-                                } else if (qName.equalsIgnoreCase("firstname")) {
-                                    bFirstName = true;
-                                } else if (qName.equalsIgnoreCase("lastname")) {
-                                    bLastName = true;
-                                } else if (qName.equalsIgnoreCase("nickname")) {
-                                    bNickName = true;
-                                }
-                                else if (qName.equalsIgnoreCase("marks")) {
-                                    bMarks = true;
-                                }
-                                break;
-                            case XMLStreamConstants.CHARACTERS:
-                                Characters characters = event.asCharacters();
-                                if(bFirstName){
-                                    System.out.println("First Name: "
-                                            + characters.getData());
-                                    bFirstName = false;
-                                }
-                                if(bLastName){
-                                    System.out.println("Last Name: "
-                                            + characters.getData());
-                                    bLastName = false;
-                                }
-                                if(bNickName){
-                                    System.out.println("Nick Name: "
-                                            + characters.getData());
-                                    bNickName = false;
-                                }
-                                if(bMarks){
-                                    System.out.println("Marks: "
-                                            + characters.getData());
-                                    bMarks = false;
-                                }
-                                break;
-                            case  XMLStreamConstants.END_ELEMENT:
-                                EndElement endElement = event.asEndElement();
-                                if(endElement.getName().getLocalPart().equalsIgnoreCase("student")){
-                                    System.out.println("End Element : student");
-                                    System.out.println();
-                                }
-                                break;
-                        }
-                    }
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (XMLStreamException e) {
-                    e.printStackTrace();
+                    System.out.println(qtp);
                 }
 
-				
+
 			}
 
 }

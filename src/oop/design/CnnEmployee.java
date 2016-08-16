@@ -12,11 +12,19 @@ public class CnnEmployee {
 	 * 
 	 **/
 	public static void main(String[] args) {
-		
-		
-		
-		
-		
+
+
+
+
+
+		AbstractEmployee s = new EmployeeInfo("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);
+		EmployeeInfo e = new EmployeeInfo("John Adams", "Boston, MA", 2, 2400.00);
+
+		System.out.println("Call mailCheck using Salary reference --");
+		s.mailCheck();
+
+		System.out.println("\n Call mailCheck using Employee reference--");
+		e.mailCheck();
 		
 		
 
