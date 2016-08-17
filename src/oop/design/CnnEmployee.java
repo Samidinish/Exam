@@ -17,14 +17,14 @@ public class CnnEmployee {
 
 
 
-		AbstractEmployee s = new EmployeeInfo("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);
-		EmployeeInfo e = new EmployeeInfo("John Adams", "Boston, MA", 2, 2400.00);
+		EmployeeInfo s = new EmployeeInfo("Mohd Mohtashim", 1,3600.00);
+		EmployeeInfo e = new EmployeeInfo("John Adams",2, 2400.00);
 
-		System.out.println("Call mailCheck using Salary reference --");
-		s.mailCheck();
+		System.out.println(s.employeeName());
+		System.out.println(s.calculateSalary());
+		System.out.println(s.getEmployeeMonthlyTotalPay());
 
-		System.out.println("\n Call mailCheck using Employee reference--");
-		e.mailCheck();
+
 		
 		
 

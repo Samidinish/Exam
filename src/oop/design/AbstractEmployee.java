@@ -3,57 +3,64 @@ package oop.design;
 /**
  * Created by asus on 8/16/2016.
  */
-public abstract class  AbstractEmployee {
+public abstract class  AbstractEmployee implements Employee {
 
+    public static final int NUMBER_OF_MONTHS_IN_A_YEAR = 12;
+    private int id;
     private String name;
     private String address;
-    private int number;
+    private double  salary;
+    private String department;
 
-    public AbstractEmployee() {
-
+    public AbstractEmployee(int id) {
+        this.id=id;
     }
-    public AbstractEmployee(String name, String address, int number)
+    public AbstractEmployee(int id, String name) {
+        this(id);
+        this.name=name;
+    }
+
+    public AbstractEmployee(int id,String name,double  salary){
+        this(id,name);
+        this.salary=salary;
+    }
+    public AbstractEmployee(int id,String name, String address){
+        this(id,name);
+        this.address=address;
+    }
+
+    public AbstractEmployee(int id, String name, String address, double  salary)
     {
-        System.out.println("Constructing an Employee");
-        this.name = name;
-        this.address = address;
-        this.number = number;
+     this(id, name, address);
+        this.salary=salary;
     }
 
 
-
-    public double computePay()
-    {
-        System.out.println("Inside Employee computePay");
-        return 0.0;
-    }
-    public void mailCheck()
-    {
-        System.out.println("Mailing a check to " + this.name
-                + " " + this.address);
+    @Override
+    public int employeeId() {
+        return this.id;
     }
 
-
-    public String toString()
-    {
-        return name + " " + address + " " + number;
+    @Override
+    public String employeeName() {
+        return this.name;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public void assignDepartment(String department) {
+        this.department=department;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public double calculateSalary() {
+        return salary/ NUMBER_OF_MONTHS_IN_A_YEAR;
     }
 
-    public String getAddress() {
-        return address;
+    @Override
+    public void benefitLayout() {
+
     }
 
-    public int getNumber() {
-        return number;
-    }
 
 }
 

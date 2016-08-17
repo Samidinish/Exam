@@ -1,5 +1,6 @@
 package datastructure;
 
+import java.util.Iterator;
 import java.util.Stack;
 
 public class UseStack {
@@ -14,13 +15,18 @@ public class UseStack {
 		stack.push("Kaya's Plate");
 		stack.push("Tanveer's plate");
 		stack.push("Shakir's plate");
-
 		System.out.println("Kaya is crying for her plate");
 		System.out.println(stack.pop());
 		stack.push("Iqbal's plate");
 		System.out.println(stack.peek());
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
+		Iterator setIteratorIndex = stack.iterator();
+
+		// print list with the iterator
+		while (setIteratorIndex.hasNext()) {
+			System.out.println(setIteratorIndex.next());
+		}
 	}
 
 }

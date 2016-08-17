@@ -1,5 +1,6 @@
 package datastructure;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,24 +12,25 @@ public class UseLinkedList {
 		 * Use For Each loop and while loop with Iterator to retrieve data.
 		 * 
 		 */
-		List<String> list = new LinkedList<>();
-		list.add("NY");
-		list.add("FL");
-		list.add("AZ");
-		list.add("Nahreen got headace");
-		list.add("Abdul is taking class from Sweet home");
-		list.add("Sohan is taking from home");
+		// create a LinkedList
+		LinkedList list = new LinkedList();
 
-		for(Object city:list){
-			System.out.println(city);
+		// add some elements
+		list.add("Selenium");
+		list.add(2);
+		list.add("Qtp");
+		list.add("10");
+
+		// print the list
+		System.out.println("LinkedList:" + list);
+
+		// set Iterator at specified index
+		Iterator setIteratorIndex = list.listIterator(2);
+
+		// print list with the iterator
+		while (setIteratorIndex.hasNext()) {
+			System.out.println(setIteratorIndex.next());
 		}
-		System.out.println("Before: " + list.size());
-		list.remove(3);
-		System.out.println("After change has been made") ;
-		for(Object city:list){
-			System.out.println(city);
-		}
-		System.out.println("After : " + list.size());
 	}
 
 }

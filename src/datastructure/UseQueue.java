@@ -1,5 +1,6 @@
 package datastructure;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -16,7 +17,14 @@ public class UseQueue {
 		queue.add("Tanveer's plate");
 		queue.add("Shakir's plate");
 
-		System.out.println(queue.element());
+		//System.out.println(queue.element());
+
+		Iterator setIteratorIndex = queue.iterator();
+
+		// print list with the iterator
+		while (setIteratorIndex.hasNext()) {
+			System.out.println(setIteratorIndex.next());
+		}
 
 	}
 

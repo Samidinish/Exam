@@ -26,10 +26,10 @@ public class UseArrayList {
 		System.out.println("Before: " + list.size());
 		list.remove(3);
 		System.out.println("After change has been made");
-		for (Object city : list) {
-			System.out.println(city);
-		}
-		System.out.println("After : " + list.size());
+		//for (Object city : list) {
+			//System.out.println(city);
+		//}
+		//System.out.println("After : " + list.size());
 
 		Iterator itr = list.iterator();
 		while (itr.hasNext()) {

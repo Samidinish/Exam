@@ -1,6 +1,9 @@
 package oop.design;
 
 public class EmployeeInfo extends AbstractEmployee{
+    public static final int FIVE_PERCENT = 5;
+    public static final int TEN_PERCENT = 10;
+    public static final int FIFTEEN_PERCENT=15;
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -29,13 +32,20 @@ public class EmployeeInfo extends AbstractEmployee{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		super();
+		super(employeeId);
 
 	}
     public EmployeeInfo(String name, int employeeId){
-		
-	}
-	
+        super(employeeId,name);
+    }
+    public EmployeeInfo(String name, int employeeId, double salary){
+        super(employeeId,name,salary);
+    }
+
+
+    public double getEmployeeMonthlyTotalPay(){
+        return calculateSalary()+EmployeeInfo.calculateEmployeBonus(FIVE_PERCENT,calculateSalary());
+    }
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -44,9 +54,8 @@ public class EmployeeInfo extends AbstractEmployee{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
-		int total=0;
-		return total;
+	public static double calculateEmployeBonus(double bonusPercentage, double salary){
+		return (bonusPercentage/100)*salary;
 	}
 	
 	/*
@@ -56,41 +65,19 @@ public class EmployeeInfo extends AbstractEmployee{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployePension(){
-		int total=0;
-
-		return total;
+	public static double calculateEmployePension( int numberOfYears, double salary){
+		switch(numberOfYears) {
+            case 1:
+                return calculateEmployeBonus(FIVE_PERCENT, salary);
+            case 2:
+                return calculateEmployeBonus(TEN_PERCENT, salary);
+            case 3:
+                return calculateEmployeBonus(FIFTEEN_PERCENT, salary);
+            //....
+            default:
+                return calculateEmployeBonus(80, salary);
+        }
 	}
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	private double salary; //Annual salary
-	public EmployeeInfo(String name, String address, int number, double
-			salary)
-	{
-		super(name, address, number);
-		setSalary(salary);
-	}
-	public void mailCheck()
-	{
-		System.out.println("Within mailCheck of Salary class ");
-		System.out.println("Mailing check to " + getName()
-				+ " with salary " + salary);
-	}
-	public double getSalary()
-	{
-		return salary;
-	}
-	public void setSalary(double newSalary)
-	{
-		if(newSalary >= 0.0)
-		{
-			salary = newSalary;
-		}
-	}
-	public double computePay()
-	{
-		System.out.println("Computing salary pay for " + getName());
-		return salary/52;
-	}
-	//////////////////////////////////////////////////////////////////////////////////////////
+
 }

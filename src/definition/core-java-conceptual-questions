@@ -33,25 +33,59 @@ Ans:-?????????????????????????????????????????????
 what is Access Specifier?
 Ans:- this are keywords in OO language that set the accecibility of a classes, methods and other members
 What is OOP ? Define each feature of java OOP.
-Ans:-
+Ans:- OOP (Object Oreinted Programming):is a programming language model organized around objects rather than "actions" and data rather than logic
+encapsulation:-is hiding data implementation by restricting access to accesors and mutators
+Abstraction:- is the development of classes, objects,types interms of their interfaces and functionality.
+inheritance:- is the process by which a class can be derived from a base class.
+polymorphism:-is the ability to exist in various forms.
 What is API? Name list of API that you have used so far.
+Ans:- API (Application program interface)set of rules and protocols that a programmer use for building software application
+ArrayList, Strings, ...
 Does java support multiple inheritance?
+Ans:- No it does support multiple inheritance.
 What is method overloading and when it happens?
+Ans:-Method overloading is a feature that allows a class to have two or more methods having the same name,if their argument are different
+and it happens at compile time.
 What is method overriding and when it happens?
+Ans:-Method overriding is declaring a method in subclass which is already present in parent class and modify its behavior.
+ and it happens at run time.
 Explain exceptions in java and how to handle it.
+Ans:-An exception is an event, which occurs during the execution of a program
+exceptions are handled using the java keywords ExceptionsHandles or user defined exceptions
 What is static keyword in java? How it has been used in variables and methods ?
+Ans:-Static means that the variable or function is shared between all instances of that class.
+If u declare a variable as static is value is the same across all instances of the class
+If you declare a method as static, the methods are associated with the class itself
 What is final and how it has been used variables and methods?
+Ans:-final is a java keyword,to define an entity that can only be assigned once.
+if you declare a variable final you can not change the value of the variable .
+If a method is declared as final; you can not override it.
 What is final, finally and finalize?
+Ans:-final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+finally is used to place important code, it will be executed whether exception is handled or not.
+finalize is used to perform clean up processing just before object is garbage collected
 What is a constructor ?
+Ans:- Constructor is a bit of code that used to create objects from  a class
 What is "this" keyword in java ?
+Ans:- this is a java keyword worked as reference to the current object.
 What is "super" keyword in java?
+Ans:- super super() is used to invoke immediate parent class constructor or class method.
 What is JVM stand for ?
 Ans:- Java Virtual Machine
 What version of java are you using?
-Ans:-Jdk
+Ans:- jdk1.8.0_101
 What is JAR stand for ?
 ANs:- Java Archive
 What is compile time and run time?
+Ans:- Compile time means the compilation process where the source code is changed to machine code.
+Run time means;when an application is running after the compilation process
 What is heap?
+Ans:-A heap is a general term used for any memory that is allocated dynamically and randomly
 How java manage it's memory?
+Ans:-Java objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease in size while the application runs.
+When the heap becomes full, garbage is collected. During the garbage collection objects that are no longer used are cleared, thus making space for new objects
 What is the difference between String, StringBuffer and StringBuilder?
+Ans:-String is used to manipulate character strings that cannot be changed
+StringBuffer/StringBuilder is used to represent characters that can be modified
+StringBuffer and StringBuilder have the same methods with one difference and that's of synchronization.
+StringBuffer is synchronized
