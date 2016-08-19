@@ -72,8 +72,10 @@ public class ProcessStudentInfo {
 				//Retrieve map data and display output.
                 String tag = "id";
                 XmlReader reader=new XmlReader();
+
                 List<Student> seleniumStudent=reader.parseData("id",pathSelenium);
                 List<Student> qtpStudent=reader.parseData("id",pathQtp);
+
                 System.out.println("Selenium Students");
                 for(Student st:seleniumStudent){
 

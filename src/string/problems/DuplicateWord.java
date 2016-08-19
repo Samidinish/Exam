@@ -26,9 +26,7 @@ public class DuplicateWord {
 
     /**
      * Method to find duplicate words in a Sentence or String
-     * @param input String
-     * @return set of duplicate words
-     */
+     * */
     public static Set<String> duplicateWords(String input){
         int count=0;
         if(input == null || input.isEmpty()){
@@ -47,20 +45,11 @@ public class DuplicateWord {
             }
         }
         return duplicates;
-      //  return count;
-    }
-  //  public static int count(String s, String pattern) {
 
-      //  String sTemp = test;
+    }
+
         int counter = 0;
 
-     //   while (sTemp.length() > 0) {
-         //   int index = sTemp.indexOf(pattern);
-          //  if (index == -1) break;
-           // sTemp = sTemp.substring(index + pattern.length(), sTemp.length());
-          //  counter++;
-      //  }
-      //  return counter;
-  //  }
+
 
 }
